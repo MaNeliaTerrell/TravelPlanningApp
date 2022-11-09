@@ -2,6 +2,7 @@ const express = require('express')
 const usersCtrl = require('../../controllers/api/users');
 const router = express.Router();
 
+
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 // POST /api/users
 
@@ -16,5 +17,7 @@ router.get('/check-token', ensureLoggedIn,  usersCtrl.checkToken);
 router.post('/', usersCtrl.create);
 
 router.post('/login', usersCtrl.logIn)
+
+
 
 module.exports = router
