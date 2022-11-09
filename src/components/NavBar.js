@@ -13,8 +13,8 @@ const NavBar = ({user, setUser}) => {
 
     return (
         <nav>
-            <NavLink to='/orders' className='Nav'>Order History</NavLink> &nbsp; | &nbsp;
-            <NavLink to='/orders/new'>New Order</NavLink>
+            <NavLink to='/savedItinerary' className='Nav'>Saved Itinerary</NavLink> &nbsp; | &nbsp;
+            <NavLink to='/itinerary'>Itineraries</NavLink>
         
           <p style={myStyles.welcome}>Welcome, {user.name}!   <br/> <br/> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEhtwz0tpdQFIM_3EvSKf7Fv6aQw0QrEWcZg&usqp=CAU' style={{ width: 55, height: 45}}/></p>
       

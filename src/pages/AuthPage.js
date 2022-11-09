@@ -9,7 +9,7 @@ const AuthPage = ({setUser}) => {
 
     
     return(
-        <div className="auth">
+        <div>
 
             <h1>AuthPage</h1>
             {showSignUp ? <SignUpForm setUser={setUser} /> : <LogInForm setUser={setUser}/>}

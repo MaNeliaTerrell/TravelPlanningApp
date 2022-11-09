@@ -1,17 +1,12 @@
 .App {
   text-align: center;
   font-family: sans-serif;
+  background-color: rgb(32, 145, 130);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -25,11 +20,11 @@
   color: white;
 }
 
-/* .auth {
+.auth {
   display: block;
   transition: 800ms;
-  opacity: 0;
-} */
+  opacity: 1;
+}
 
 /* .form-container {
   width: 300px;
@@ -75,7 +70,7 @@ outline: none;
   }
 }
 
-/* .first-button {
+.first-button {
   border-radius: 40px;
   border: none;
   position: absolute;
@@ -101,7 +96,7 @@ outline: none;
     border: none;
   }
 
- .form .email {
+ /* .form .email {
     border: none;
 margin-bottom: 15px;
 color: #bfc0c0;

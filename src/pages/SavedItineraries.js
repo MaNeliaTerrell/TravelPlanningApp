@@ -1,6 +1,6 @@
 import { checkToken } from "../utilities/users-service"
 
-const OrderHistoryPage = () => {
+const SavedItineraries = () => {
 
     const handleCheckToken = async () => {
         const expDate = await checkToken()
@@ -8,12 +8,12 @@ const OrderHistoryPage = () => {
     }
     return(
         <div>
-            <h1>Order History</h1>
+            <h1>Saved Itineraries</h1>
             <button onClick={handleCheckToken}>Check When My Login Expires</button>
         
 
         </div>
     )
 }
-export default OrderHistoryPage
+export default SavedItineraries
 
