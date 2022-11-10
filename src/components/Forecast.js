@@ -2,13 +2,13 @@ import Weather from "./Weather"
 
 
 const Forecast = (props) => {
-    const {minTemp, maxTemp, weatherType, weatherKey, date} = props
+    const { weatherKey, minTemp, maxTemp, weatherType,date} = props
     return(
 
         <div>
+            <div>icon:{weatherKey}</div>
             <div>Date: {date}</div>
             <div>Weather Type: {weatherType}</div>
-            <div>Icon: {weatherKey}</div>
             <div>Min. Temperature: {minTemp}
                 Max. Temperature: {maxTemp}</div>
         </div>

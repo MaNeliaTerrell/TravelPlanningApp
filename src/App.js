@@ -1,5 +1,5 @@
 import './App.css';
-import { useState} from 'react'
+import { useState } from 'react'
 import AuthPage from './pages/AuthPage'
 import Itinerary from './pages/Itinerary'
 import SavedItineraries from './pages/SavedItineraries'
@@ -8,23 +8,25 @@ import {Routes, Route} from 'react-router-dom'
 import { getUser } from "./utilities/users-service"
 import Weather from './components/Weather';
 import Forecast from './components/Forecast';
+import Container from 'react-bootstrap/Container';
 
 
 function App() {
   const [user, setUser] = useState(getUser())
+  const [savedItinerary, setSavedItinerary] = useState([])
  
   return (
     
     <main className="App">
       { 
       user ? (
-        <>
+        <Container>
       <NavBar user={user} setUser={setUser}/>
       <Routes>
-        <Route path="/itineraries" element={<Itinerary />} />
-        {/* <Route path="" element={<Weather/>} /> */}
+        <Route path="/itinerary" element={<Itinerary setSavedItinerary={setSavedItinerary} savedItinerary={savedItinerary} />} />
+        <Route path="/saveditinerary" element={<SavedItineraries savedItinerary={savedItinerary}/>} />
       </Routes>
-      </>
+      </Container>
        ) : (
         <AuthPage setUser={setUser}/>
     )}

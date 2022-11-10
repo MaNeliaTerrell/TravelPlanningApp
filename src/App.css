@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   font-family: sans-serif;
   background-color: rgb(32, 145, 130);
@@ -57,20 +57,12 @@ outline: none;
 } */
 
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.first-button {
+/* .first-button {
   border-radius: 40px;
   border: none;
   position: absolute;
@@ -94,7 +86,7 @@ outline: none;
     box-shadow:  5px 5px 10px #82a2aa, 
                  -5px -5px 10px #90b6bc;
     border: none;
-  }
+  } */
 
  /* .form .email {
     border: none;
@@ -107,4 +99,4 @@ border-radius: 10px;
 box-shadow: inset 5px 5px 5px #232323, 
             inset -5px -5px 5px #292929;
 outline: none;
-  } */
+  } */ 

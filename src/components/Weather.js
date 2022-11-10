@@ -11,8 +11,7 @@ const Weather = () => {
     // console.log(weather)
   }, [weather]);
 
-
-  const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Coron%2C%20Palawan%2C%20Philippines/next7days?unitGroup=metric&elements=datetime%2Cname%2Ctempmax%2Ctempmin%2Ctemp%2Ccloudcover%2Cconditions%2Cicon&key=MD3V4ER9SPR7GCLY5LBS4Z33Z&contentType=json"
+  const url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Coron%2C%20Palawan%2C%20Philippines/next5days?iconSet=icons1&unitGroup=metric&elements=datetime%2Cname%2Ctempmax%2Ctempmin%2Ctemp%2Ccloudcover%2Cconditions&key=MD3V4ER9SPR7GCLY5LBS4Z33Z&contentType=json"
 
   // Function to fetch weather data
   const getWeather = async () => {
@@ -30,16 +29,16 @@ const Weather = () => {
 
   return (
     <div className="weather">
-      <button onClick={getWeather}>Get 8-Day Forecast</button>
+      <div><button onClick={getWeather}>Get 8-Day Forecast</button></div>
 
       {weather && weather.days.map((i, index) => (
         <div key={index}>
 
           <Forecast
+            weatherKey={i.icon}
             minTemp={i.tempmin}
             maxTemp={i.tempmax}
             weatherType={i.conditions}
-            weatherKey={i.icon}
             date={i.datetime}
 
 

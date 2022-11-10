@@ -1,6 +1,7 @@
 import { useState} from 'react'
 import { Link, NavLink } from "react-router-dom";
 import * as userService from '../utilities/users-service';
+import Itinerary from '../pages/Itinerary';
 
 const NavBar = ({user, setUser}) => {
   
@@ -13,13 +14,11 @@ const NavBar = ({user, setUser}) => {
 
     return (
         <nav>
-            <NavLink to='/savedItinerary' className='Nav'>Saved Itinerary</NavLink> &nbsp; | &nbsp;
+            <NavLink to='/saveditinerary' className='Nav'>Saved Itinerary</NavLink> &nbsp; | &nbsp;
             <NavLink to='/itinerary'>Itineraries</NavLink>
-        
-          <p style={myStyles.welcome}>Welcome, {user.name}!   <br/> <br/> <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEhtwz0tpdQFIM_3EvSKf7Fv6aQw0QrEWcZg&usqp=CAU' style={{ width: 55, height: 45}}/></p>
-      
+            
+          <p style={myStyles.welcome}>Welcome, {user.name}!   <br/> <br/> </p>
             <Link to="" onClick={handleLogOut}>Log Out</Link>
-
         </nav>
     )
 }
