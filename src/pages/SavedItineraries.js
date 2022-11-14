@@ -5,74 +5,80 @@ import Container from 'react-bootstrap/Container'
 import { placesToVisit, activities, placesToEat, accommodation } from "../components/data";
 import Itinerary from "./Itinerary";
 import { useState } from 'react'
+// import planSchema from "../../models/plan"
+import { savingData } from '../utilities/plan-service'
 
 
 const SavedItineraries = (props) => {
     const { savedItinerary } = props
+
+    let state ={
+        name: '',
+        img: '',
+        location:'',
+        website:'',
+        error:'',
+    }
+
 
     const handleCheckToken = async () => {
         const expDate = await checkToken()
         console.log(expDate);
     }
 
+    const handleSave = async (e) => {
+        e.preventDefault();
+        // alert(JSON.stringify(this.state))
+        try {
+            const { name, img, location, website} = this.state;
+            const formSaved = {name, img, location, website
+              };
+              const planToSave = await savingData(formSaved)
+              this.props.setSaveditinerary(savedItinerary)
+            console.log(planToSave);
+        } catch (error){
+            // if we have an error
+           console.log('Cannot Save from SavedItineraries file');
+        }
+        console.log(this.state);
+    }
+
+//    const DeletePlan = () => {
+//     const [ savedItem, setSavedItem] = useState ([])
+//    }
+   
+
     return (
         <main>
             <h1>Saved Itineraries</h1>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>Day 1
+            <div >Day 1
 
-                
-                <Card style={{ flexWrap: 'wrap', width: '100%', height: '150px' }}>
 
-                    <Card style={{ flexWrap: 'wrap' }}>
-                        <Card.Body >
+                <Card >
 
-                            {savedItinerary && savedItinerary.map(place => (
-                                <div >
-                                    <img src={place.img} style={{ width: '100px', height: '100px' }} />
-                                    {place.name}
+                    <Card.Text style={{ fontSize: '20px' }}>Itinerary</Card.Text>
+                    <Card.Body style={{ flexWrap: 'wrap', flexDirection: 'row', display: 'flex', margin: '5px' }} >
+
+                        <br />
+
+                        {savedItinerary && savedItinerary.map((item, index) => (
+                            <span>
+                                <div key={index} className='saved itineraries' style={{ justifyContent: 'center', alignSelf: 'center', margin: '15px' }}>
+                                    <img src={item.img} style={{ width: '125px', height: '125px', alignContent: 'center', alignItems: 'center', flexWrap: 'wrap', display: 'flex', margin: '10px' }} />
+                                    <br />
+                                    <div style={{ fontSize: '20px' }} >{item.name}</div>
+                                    <br />
+                                    <div style={{ fontSize: '20px' }} >{item.location}</div>
+                                    <br />
+                                    <a style={{ fontSize: '20px' }} href={item.website} >Website: </a>
+                                    <div style={{ justifyContent: 'space-around', alignSelf: 'center' }}>
+                                        <Button type='submit' style={{ alignContent: 'center' }} onClick={handleSave}>Save</Button>
+                                        <Button style={{ alignContent: 'center' }} >Delete</Button></div>
                                 </div>
-                            ))}
-
-                            <Card.Text>Place/s to Visit</Card.Text>
-                            <Button >Save</Button>
-
-                        </Card.Body>
-                    </Card>
-
-
-                    <Card style={{ flexWrap: 'wrap' }}>
-                        <Card.Body>
-
-                        {savedItinerary && savedItinerary.map(activities => (
-                                <div >
-                                    <img src={activities.img} style={{ width: '100px', height: '100px' }} />
-                                    {activities.name}
-                                </div>
-                            ))}
-
-                            <Card.Text>
-                                Activities
-                            </Card.Text>
-                            <Button >Save</Button>
-
-                        </Card.Body>
-
-                    </Card>
-
-
-                    <Card style={{ flexWrap: 'wrap' }}>
-                        <Card.Body>
-
-                            <Card.Img variant="top" />
-                            <Card.Text>
-                                Where to Eat
-                            </Card.Text>
-                            <Button >Save</Button>
-
-                        </Card.Body>
-                    </Card>
-
+                            </span>
+                        ))}
+                    </Card.Body>
                 </Card>
             </div>
 
@@ -89,5 +95,8 @@ const SavedItineraries = (props) => {
 
     )
 }
+
+
+
 export default SavedItineraries
 

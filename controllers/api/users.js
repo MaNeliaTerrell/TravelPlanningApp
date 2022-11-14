@@ -2,6 +2,7 @@ const User = require('../../models/user')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
+
 async function create(req, res) {
    try {
     console.log(req.body);
@@ -37,11 +38,6 @@ function checkToken(req, res) {
     res.json(req.exp);
   }
 
-
-
-
-
-
 // -------Helper Function ------
 function createJWT(user){
     return jwt.sign({user},process.env.SECRET, {expiresIn: '24h'}
@@ -51,5 +47,6 @@ function createJWT(user){
 module.exports = {
     create, 
     logIn,
-    checkToken
+    checkToken,
+    
 }

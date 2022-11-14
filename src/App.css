@@ -1,102 +1,47 @@
-/* .App {
+.App {
   text-align: center;
   font-family: sans-serif;
-  background-color: rgb(32, 145, 130);
+  background-color: aqua;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.popup{
+  height: 260px;
+  border-width: 10rem;
+  text-align: justify;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  background-color: rgb(170, 237, 239);
+}
+
+.weather{
+  display: flex;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(170, 237, 239);
+  justify-items: center;
 }
 
-.auth {
-  display: block;
-  transition: 800ms;
-  opacity: 1;
+form{
+  background-color: rgb(170, 237, 239);
+  margin: 10px;
+  font-display: block;
+  box-shadow: 20px 20px 50px #b9f2ef, 
+            -30px -30px 60px #a1e3e3;
 }
 
-/* .form-container {
-  width: 300px;
- height: 450px;
- z-index: 2;
- text-align: center;
- top: 50%;
- left: 50%;
- transform: translate(-50%,-150%) scale(0);
- padding: 20px;
- border-radius: 20px;
- background: #262626;
- position: absolute;
- box-shadow:  38px 38px 56px #1e1e1e, 
-             -25px -25px 38px #1e1e1e;
- z-index: 1;
-} */
-
-/* .form {
-  border: none;
-margin-bottom: 15px;
-color: #bfc0c0;
-background: #6bc3d3;
-padding: 20px;
-font-size: 16px;
-border-radius: 10px;
-box-shadow: inset 5px 5px 5px #3ccdcd, 
-            inset -5px -5px 5px #31b8bf;
-outline: none;
-} */
-
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-
-/* .first-button {
-  border-radius: 40px;
-  border: none;
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  color: rgb(28, 152, 174);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 30px 50px;
-  transform: translate(-50%, -50%);
-  background: #fffcfc;
-  box-shadow:  18px 18px 25px #92bdbd, 
-               -15px -15px 25px #75a2a7;
-  transition: box-shadow .35s ease !important;
-  outline: none;
-
-  }
-
-  .first-button:active {  
-    background: linear-gradient(145deg, white, white);
-    box-shadow:  5px 5px 10px #82a2aa, 
-                 -5px -5px 10px #90b6bc;
-    border: none;
-  } */
-
- /* .form .email {
-    border: none;
-margin-bottom: 15px;
-color: #bfc0c0;
-background: #262626;
-padding: 20px;
-font-size: 16px;
-border-radius: 10px;
-box-shadow: inset 5px 5px 5px #232323, 
-            inset -5px -5px 5px #292929;
-outline: none;
-  } */ 
+input{
+  align-content: center;
+  
+}

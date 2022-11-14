@@ -17,8 +17,8 @@ const Itinerary = (props) => {
 
                     <h1>Places to Visit</h1>
                <div style={{display: 'flex', flexWrap: 'wrap'}}>
-                {placesToVisit.map(place => (
-                    <div style={{ margin: '10px' }}>
+                {placesToVisit.map((place, index) => (
+                    <div style={{ margin: '10px' }} key={index}>
                     <Card style={{ width: '18rem'}}>
                         <Card.Img variant="top" src={place.img} />
                         <Card.Body>
@@ -38,8 +38,8 @@ const Itinerary = (props) => {
                 
                 <h1>Activities</h1>
            <div style={{display: 'flex', flexWrap: 'wrap'}}>
-            {activities.map(activities => (
-                <div style={{ margin: '10px' }}>
+            {activities.map((activities, index) => (
+                <div style={{ margin: '10px' }} key={index}>
                 <Card style={{ width: '18rem'}}>
                     <Card.Img variant="top" src={activities.img} />
                     <Card.Body>
@@ -61,10 +61,10 @@ const Itinerary = (props) => {
                 
                 <h1>Places to Eat</h1>
            <div style={{display: 'flex', flexWrap: 'wrap'}}>
-            {placesToEat.map(food => (
-                <div style={{ margin: '10px' }}>
+            {placesToEat.map((food, index) => (
+                <div style={{ margin: '10px' }} key={index}>
                 <Card style={{ width: '18rem'}}>
-                    <Card.Img variant="top" src={food.food} />
+                    <Card.Img variant="top" src={food.img} />
                     <Card.Body>
                         <Card.Title>{food.name}</Card.Title>
                         <Card.Text>
@@ -85,8 +85,8 @@ const Itinerary = (props) => {
                 
                 <h1>Places to Stay</h1>
            <div style={{display: 'flex', flexWrap: 'wrap'}}>
-            {accommodation.map(stay => (
-                <div style={{ margin: '10px' }}>
+            {accommodation.map((stay, index) => (
+                <div style={{ margin: '10px' }} key={index}>
                 <Card style={{ width: '18rem'}}>
                     <Card.Img variant="top" src={stay.img} />
                     <Card.Body>

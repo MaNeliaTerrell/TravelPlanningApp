@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import Forecast from './Forecast'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 const Weather = () => {
@@ -27,29 +29,36 @@ const Weather = () => {
     }
   }
 
-  return (
-    <div className="weather">
-      <div><button onClick={getWeather}>Get 8-Day Forecast</button></div>
-
-      {weather && weather.days.map((i, index) => (
-        <div key={index}>
-
-          <Forecast
-            weatherKey={i.icon}
-            minTemp={i.tempmin}
-            maxTemp={i.tempmax}
-            weatherType={i.conditions}
-            date={i.datetime}
+  function DropdownItem() {
 
 
-          />
-        </div>
-      ))}
+    return (
+      <div>
+        <div>
+          <button className='Dropdown' onClick={getWeather} styel={{backgroundColor: 'green'}}>Get 8-Day Forecast</button>
 
-    </div>
-  )
+          {weather && weather.days.map((i, index) => (
+            <div>
+            <div key={index}></div>
 
-}
+              <Forecast
+                weatherKey={i.icon}
+                minTemp={i.tempmin}
+                maxTemp={i.tempmax}
+                weatherType={i.conditions}
+                date={i.datetime}
+                />
+                
+          </div>
+          ))}
+           </div>
+
+      </div>
+          
+    )}
+          }
+          
+
 
 
 export default Weather
