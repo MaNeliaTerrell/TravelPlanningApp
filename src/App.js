@@ -7,13 +7,19 @@ import NavBar from './components/NavBar'
 import { Routes, Route } from 'react-router-dom'
 import { getUser } from "./utilities/users-service"
 import Weather from './components/Weather';
-import Modal from 'react-bootstrap'
+
 
 
 function App() {
   const [user, setUser] = useState(getUser())
   const [savedItinerary, setSavedItinerary] = useState([])
+
+  // const [savedPlan, setSavedPlan] = useState([]) 
+
   const [popUp, setPopUp] = useState(false)
+
+
+
   const handleClickOpen = () => {
     setPopUp(!popUp)
   }

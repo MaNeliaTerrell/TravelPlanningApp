@@ -3,8 +3,6 @@ import { placesToVisit, activities, placesToEat, accommodation } from "../compon
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-
-
 const Itinerary = (props) => {
     const {savedItinerary, setSavedItinerary} = props
 

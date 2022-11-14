@@ -11,6 +11,7 @@ import { savingData } from '../utilities/plan-service'
 
 const SavedItineraries = (props) => {
     const { savedItinerary } = props
+   
 
     let state ={
         name: '',
@@ -19,7 +20,6 @@ const SavedItineraries = (props) => {
         website:'',
         error:'',
     }
-
 
     const handleCheckToken = async () => {
         const expDate = await checkToken()
@@ -34,8 +34,8 @@ const SavedItineraries = (props) => {
             const formSaved = {name, img, location, website
               };
               const planToSave = await savingData(formSaved)
-              this.props.setSaveditinerary(savedItinerary)
-            console.log(planToSave);
+              this.props.setSavedItinerary(savedItinerary)
+              console.log(planToSave);
         } catch (error){
             // if we have an error
            console.log('Cannot Save from SavedItineraries file');
