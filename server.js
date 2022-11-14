@@ -35,7 +35,6 @@ app.use('/api/users', require('./routes/api/users'))
 // })
 
 // Routes for the Saved Itinerary
-
 app.use('/api/plan', require('./routes/api/plan'))
 app.use('/api/plan', plan)
 
