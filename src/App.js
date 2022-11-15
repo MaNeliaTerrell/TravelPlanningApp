@@ -52,15 +52,17 @@ function App() {
             <div className='popup-header'>
               <h1 onClick={closePopUp}>x &nbsp; &nbsp;</h1>
 
-              <AuthPage setUser={setUser} style={{height: '50%', width: '50%'}}/>
+              <AuthPage setUser={setUser} style={{height: '20%', width: '20%'}}/>
 
             </div>
           </div>:'')
         )}
 
-    <h1><img  style={{width: "100%", height: "350px"}}/></h1>
+    <h1><img  style={{width: "100%", height: "250px"}}/></h1>
 
       {/* <BackgroundSlider/> */}
+
+      {/* <img  src="https://windows10spotlight.com/wp-content/uploads/2020/09/0ef88fa434c849a3472ec0af13970f6f.jpg" /> */}
       <br />
       <br />
 

@@ -24,7 +24,7 @@ const Itinerary = (props) => {
                             <Card.Text>
                                 Description
                             </Card.Text>
-                            <Button onClick={() => setSavedItinerary([...savedItinerary, place])} variant="primary">Add to itinerary</Button>
+                            <Button onClick={() => setSavedItinerary([...savedItinerary, place])} variant="success">Add to itinerary</Button>
                         </Card.Body>
                     </Card>
                     </div>
@@ -47,7 +47,7 @@ const Itinerary = (props) => {
                            <br/>
                            <a href={activities.website}>Visit the Website</a>
                         </Card.Text>
-                        <Button onClick={() => setSavedItinerary([...savedItinerary, activities])} variant="primary">Add to itinerary</Button>
+                        <Button onClick={() => setSavedItinerary([...savedItinerary, activities])} variant="success">Add to itinerary</Button>
                     </Card.Body>
                 </Card>
                 </div>
@@ -70,7 +70,7 @@ const Itinerary = (props) => {
                            <br/>
                            <a href={food.website}>Visit the Website</a>
                         </Card.Text>
-                        <Button onClick={() => setSavedItinerary([...savedItinerary, food])} variant="primary">Add to itinerary</Button>
+                        <Button onClick={() => setSavedItinerary([...savedItinerary, food])} variant="success">Add to itinerary</Button>
                     </Card.Body>
                 </Card>
                 </div>
@@ -94,7 +94,7 @@ const Itinerary = (props) => {
                            <br/>
                            <a href={stay.website}>Visit the Website</a>
                         </Card.Text>
-                        <Button onClick={() => setSavedItinerary([...savedItinerary, stay])} variant="primary">Add to itinerary</Button>
+                        <Button onClick={() => setSavedItinerary([...savedItinerary, stay])} variant="success">Add to itinerary</Button>
                     </Card.Body>
                 </Card>
                 </div>

@@ -46,7 +46,7 @@ const SavedItineraries = (props) => {
             <div >Day 1
 
 
-                <Card >
+                <Card style={{backgroundImage: "linear-gradient(to right,  #0f9a46,#33caf3,#c5627b, #0f90a0 )"}}>
 
                     <Card.Text style={{ fontSize: '50px', color: 'white' }}>Itinerary</Card.Text>
                     <Card.Body style={{ flexWrap: 'wrap', flexDirection: 'row', display: 'flex', margin: '5px' }} >
