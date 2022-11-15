@@ -38,10 +38,6 @@ const SavedItineraries = (props) => {
         }
     }
 
-    function deletePlan(){
-        savedItinerary.removeChild("saved itineraries")
-    }
-
 
     return (
         <main>
@@ -52,7 +48,7 @@ const SavedItineraries = (props) => {
 
                 <Card >
 
-                    <Card.Text style={{ fontSize: '20px' }}>Itinerary</Card.Text>
+                    <Card.Text style={{ fontSize: '50px', color: 'white' }}>Itinerary</Card.Text>
                     <Card.Body style={{ flexWrap: 'wrap', flexDirection: 'row', display: 'flex', margin: '5px' }} >
 
                         <br />
@@ -69,7 +65,7 @@ const SavedItineraries = (props) => {
                                     <a style={{ fontSize: '20px' }} href={item.website} >Website: </a>
                                     <div style={{ justifyContent: 'space-around', alignSelf: 'center' }}>
                                         <Button type='button' style={{ alignContent: 'center' }} onClick={onSave}>Save</Button>
-                                        <Button style={{ alignContent: 'center' }} onClick={deletePlan} >Delete</Button></div>
+                                        <Button style={{ alignContent: 'center' }}  >Delete</Button></div>
                                 </div>
                             </span>
                         ))}

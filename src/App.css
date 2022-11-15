@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-family: sans-serif;
-  background-image: url('../src/components/images/coron-map.jpg');
+  background-color:rgb(18, 112, 141);
   background-position-x: center; 
   background-size: cover ;
 }
