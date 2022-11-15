@@ -13,7 +13,7 @@ const SavedItineraries = (props) => {
     const { savedItinerary } = props
    
 
-    let state ={
+    const state ={
         name: '',
         img: '',
         location:'',
@@ -26,27 +26,22 @@ const SavedItineraries = (props) => {
         console.log(expDate);
     }
 
-    const handleSave = async (e) => {
-        e.preventDefault();
-        // alert(JSON.stringify(this.state))
+    const onSave = async (e) => {
+        e.preventDefault()
+        // console.log(savedItinerary);
         try {
-            const { name, img, location, website} = this.state;
-            const formSaved = {name, img, location, website
-              };
-              const planToSave = await savingData(formSaved)
-              this.props.setSavedItinerary(savedItinerary)
-              console.log(planToSave);
-        } catch (error){
-            // if we have an error
-           console.log('Cannot Save from SavedItineraries file');
+            const {name, img, location, website} = this.state
+            const tripData=  {name, img, location, website} 
+
+        } catch (error) {
+            console.log('Cannot Save');
         }
-        console.log(this.state);
     }
 
-//    const DeletePlan = () => {
-//     const [ savedItem, setSavedItem] = useState ([])
-//    }
-   
+    function deletePlan(){
+        savedItinerary.removeChild("saved itineraries")
+    }
+
 
     return (
         <main>
@@ -73,8 +68,8 @@ const SavedItineraries = (props) => {
                                     <br />
                                     <a style={{ fontSize: '20px' }} href={item.website} >Website: </a>
                                     <div style={{ justifyContent: 'space-around', alignSelf: 'center' }}>
-                                        <Button type='submit' style={{ alignContent: 'center' }} onClick={handleSave}>Save</Button>
-                                        <Button style={{ alignContent: 'center' }} >Delete</Button></div>
+                                        <Button type='button' style={{ alignContent: 'center' }} onClick={onSave}>Save</Button>
+                                        <Button style={{ alignContent: 'center' }} onClick={deletePlan} >Delete</Button></div>
                                 </div>
                             </span>
                         ))}

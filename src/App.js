@@ -7,6 +7,7 @@ import NavBar from './components/NavBar'
 import { Routes, Route } from 'react-router-dom'
 import { getUser } from "./utilities/users-service"
 import Weather from './components/Weather';
+import BackgroundSlider from './components/BackgroundSlider';
 
 
 
@@ -17,7 +18,6 @@ function App() {
   // const [savedPlan, setSavedPlan] = useState([]) 
 
   const [popUp, setPopUp] = useState(false)
-
 
 
   const handleClickOpen = () => {
@@ -58,7 +58,9 @@ function App() {
           </div>:'')
         )}
 
-      {/* <h1><img src="https://t3.ftcdn.net/jpg/04/99/60/98/240_F_499609814_YXsjaJPHzO5deLSEn7DkNnSyhNMgs1Xg.jpg" style={{width: "100%", height: "350px"}}/></h1> */}
+    <h1><img  style={{width: "100%", height: "350px"}}/></h1>
+
+      {/* <BackgroundSlider/> */}
       <br />
       <br />
 

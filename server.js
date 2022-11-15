@@ -18,7 +18,7 @@ app.use(cors())
 app.use(morgan('dev'))
 app.use(express.json())
 // app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
-// app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 // Middleware to verify token and assign user object of payload to req.user.
 // Be sure to mount before routes

@@ -20,10 +20,10 @@ router.get('/', async (req, res) => {
 })
 
 
-
 router.post('/', async (req, res) => {
-    const newPlan = new Plan(req.body)
+    
     try {
+        const newPlan = new Plan(req.body)
         const savedPlan = await newPlan.save()
         res.status(200).json(savedPlan)
     } catch (error) {

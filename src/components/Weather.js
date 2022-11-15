@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Forecast from './Forecast'
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import '../../src/App.css'
 
 
 const Weather = () => {
@@ -29,20 +30,20 @@ const Weather = () => {
     }
   }
 
-  function DropdownItem() {
+  
 
 
     return (
       <div>
         <div>
-          <button className='Dropdown' onClick={getWeather} styel={{backgroundColor: 'green'}}>Get 8-Day Forecast</button>
+          <button className='weather' onClick={getWeather} styel={{backgroundColor: 'teal'}}>Get 8-Day Forecast</button>
 
           {weather && weather.days.map((i, index) => (
             <div>
             <div key={index}></div>
 
               <Forecast
-                weatherKey={i.icon}
+                
                 minTemp={i.tempmin}
                 maxTemp={i.tempmax}
                 weatherType={i.conditions}
@@ -56,7 +57,7 @@ const Weather = () => {
       </div>
           
     )}
-          }
+          
           
 
 

@@ -49,3 +49,5 @@ const funPics = [
     }
 
 ]
+
+module.exports = funPics
