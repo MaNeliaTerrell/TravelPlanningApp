@@ -2,6 +2,7 @@ import React from 'react'
 import { placesToVisit, activities, placesToEat, accommodation } from "../components/data"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+// import { SelectDatepicker } from 'react-select-datepicker';
 
 const Itinerary = (props) => {
     const {savedItinerary, setSavedItinerary} = props

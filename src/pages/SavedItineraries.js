@@ -28,14 +28,14 @@ const SavedItineraries = (props) => {
 
     const onSave = async (e) => {
         e.preventDefault()
-        // console.log(savedItinerary);
-        try {
-            const {name, img, location, website} = this.state
-            const tripData=  {name, img, location, website} 
+        console.log(savedItinerary);
+        // try {
+        //     const {name, img, location, website} = this.state
+        //     const tripData=  {name, img, location, website} 
 
-        } catch (error) {
-            console.log('Cannot Save');
-        }
+        // } catch (error) {
+        //     console.log('Cannot Save');
+        // }
     }
 
 
