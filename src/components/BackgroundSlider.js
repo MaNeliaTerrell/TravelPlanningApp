@@ -39,28 +39,28 @@ const delay = 2500;
 
 function BackgroundSlider() {
   const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
+  // const timeoutRef = React.useRef(null);
 
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
+  // function resetTimeout() {
+  //   if (timeoutRef.current) {
+  //     clearTimeout(timeoutRef.current);
+  //   }
+  // }
 
-  React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === funPics.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
+  // React.useEffect(() => {
+  //   resetTimeout();
+  //   timeoutRef.current = setTimeout(
+  //     () =>
+  //       setIndex((prevIndex) =>
+  //         prevIndex === funPics.length - 1 ? 0 : prevIndex + 1
+  //       ),
+  //     delay
+  //   );
 
-    return () => {
-      resetTimeout();
-    };
-  }, [index]);
+  //   return () => {
+  //     resetTimeout();
+  //   };
+  // }, [index]);
 
   return (
     <div className="slideshow">

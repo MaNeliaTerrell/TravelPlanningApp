@@ -37,16 +37,15 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(170, 237, 239);
-  justify-items: center;
-  align-self: center;
+
 }
 
 form{
-  background-color: rgb(192, 234, 235);
+  background-color: rgb(133, 213, 214);
   margin: 10px;
-  font-display: block;
-  box-shadow: 20px 20px 50px #b9f2ef, 
-            -30px -30px 60px #94b8b8;
+  /* font-display: block; */
+  box-shadow: 20px 20px 50px rgb(94, 223, 216), 
+            -30px -30px 60px #248ba4;
 }
 
 input{

@@ -31,7 +31,7 @@ function App() {
 
     <main className="App" >
       <button className='loginButton' onClick={handleClickOpen}><img src='https://cdn-icons-png.flaticon.com/512/1177/1177568.png' style={{width: '35px', 
-  height: '35px', 
+  height: '35px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' , 
   backgroundColor: 'white',
   }} /></button>
       <div>
