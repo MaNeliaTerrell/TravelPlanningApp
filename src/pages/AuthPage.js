@@ -11,8 +11,6 @@ const AuthPage = ({ setUser }) => {
  
 
     return (
-
-
         <body>
 
             <div>
@@ -20,7 +18,8 @@ const AuthPage = ({ setUser }) => {
                 
                 {showSignUp ? <SignUpForm setUser={setUser} /> : <LogInForm setUser={setUser} />}
 
-                <button onClick={() => setShowSignUp(!showSignUp)}>{showSignUp ? "Log In" : "Sign Up"}</button>
+                <button style={{fontSize: '10px', backgroundColor: 'lightblue'}}
+                onClick={() => setShowSignUp(!showSignUp)} >{showSignUp ? "Log In" : "Sign Up"}</button>
 
             </div>
             <>

@@ -20,7 +20,7 @@
   position: absolute;
   top: 25%;
   right: 25%;
-  background-color: rgb(170, 237, 239);
+  background-color: rgb(129, 206, 209);
 }
 
 .weather{
@@ -41,11 +41,11 @@
 }
 
 form{
-  background-color: rgb(170, 237, 239);
+  background-color: rgb(192, 234, 235);
   margin: 10px;
   font-display: block;
   box-shadow: 20px 20px 50px #b9f2ef, 
-            -30px -30px 60px #a1e3e3;
+            -30px -30px 60px #94b8b8;
 }
 
 input{
