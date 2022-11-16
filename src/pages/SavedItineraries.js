@@ -6,37 +6,47 @@ import { placesToVisit, activities, placesToEat, accommodation } from "../compon
 import Itinerary from "./Itinerary";
 import { useState } from 'react'
 // import planSchema from "../../models/plan"
-import { savingData } from '../utilities/plan-service'
+// import { savingData } from '../utilities/plan-service'
+// import axios from 'axios'
 
 
 const SavedItineraries = (props) => {
     const { savedItinerary } = props
+
    
 
-    const state ={
-        name: '',
-        img: '',
-        location:'',
-        website:'',
-        error:'',
-    }
+    // const state ={
+    //     name: '',
+    //     img: '',
+    //     location:'',
+    //     website:'',
+    //     error:'',
+    // }
 
     const handleCheckToken = async () => {
         const expDate = await checkToken()
         console.log(expDate);
     }
 
-    const onSave = async (e) => {
-        e.preventDefault()
-        console.log(savedItinerary);
-        // try {
-        //     const {name, img, location, website} = this.state
-        //     const tripData=  {name, img, location, website} 
+    // const onSave = async (e) => {
+    //     e.preventDefault()
+    //     // console.log(savedItinerary);
+    //     alert(JSON.stringify(this.state))
+    //     try {
+    //         const {name, img, location, website} = this.state
+    //         const tripData=  {name, img, location, website} 
 
-        // } catch (error) {
-        //     console.log('Cannot Save');
-        // }
-    }
+    //     const travelPlan = await axios.get('/api/plan')
+        
+    //     } catch (error) {
+    //         console.log('Cannot Save');
+    //     }
+    // }
+
+    // const removeElement=()=>{
+    //     {savedItinerary.map(element =>)}
+    // }
+
 
 
     return (
@@ -64,8 +74,8 @@ const SavedItineraries = (props) => {
                                     <br />
                                     <a style={{ fontSize: '20px' }} href={item.website} >Website: </a>
                                     <div style={{ justifyContent: 'space-around', alignSelf: 'center' }}>
-                                        <Button type='button' style={{ alignContent: 'center' }} onClick={onSave}>Save</Button>
-                                        <Button style={{ alignContent: 'center' }}  >Delete</Button></div>
+                                        <Button type='button' style={{ alignContent: 'center' }} >Save</Button>
+                                        <Button style={{ alignContent: 'center' }} onClick={this.props.remove('saved itineraries')}>Delete</Button></div>
                                 </div>
                             </span>
                         ))}

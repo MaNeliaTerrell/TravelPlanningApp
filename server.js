@@ -6,12 +6,13 @@ require('dotenv').config()
 // Connecting to database
 require ('./config/database')
 const cors = require("cors")
+const axios = require('axios')
 
 const app = express()
 const PORT = process.env.PORT || 3001;
 
 // Plans
-const plan = require('./routes/api/plan')
+// const plan = require('./routes/api/plan')
 
 // Middleware
 app.use(cors())
@@ -35,8 +36,8 @@ app.use('/api/users', require('./routes/api/users'))
 // })
 
 // Routes for the Saved Itinerary
-app.use('/api/plan', require('./routes/api/plan'))
-app.use('/api/plan', plan)
+// app.use('/api/plan', require('./routes/api/plan'))
+// app.use('/api/plan', plan)
 
 
 // Catch All to serve the production app

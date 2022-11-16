@@ -57,9 +57,9 @@ function App() {
             </div>
           </div>:'')
         )}
-          <img src="https://farm5.staticflickr.com/4743/26656856948_a474bd941c_b.jpg" style={{width: '100%', height: '450px', margin: '10px'}}></img>
+          {/* <img src="https://farm5.staticflickr.com/4743/26656856948_a474bd941c_b.jpg" style={{width: '100%', height: '450px', margin: '10px'}}></img> */}
           <br/>
-          <p style={{fontSize: '15px', color: "white", fontFamily: 'Papyrus', display: 'grid', backgroundColor: 'rgba(15, 29, 51, 0.75)', textAlign: 'justify', margin: '15px', padding: '20px'}}>{'\t'}The paradisal province of Palawan is a constant feature in many international “Best In The World” lists, thanks to its rich and diverse flora and fauna, and much-preserved natural attractions. Discover why healthy ecotourism is such an essential part in maintaining the natural wonders of this heaven on earth.
+          {/* <p style={{fontSize: '15px', color: "white", fontFamily: 'Papyrus', display: 'grid', backgroundColor: 'rgba(15, 29, 51, 0.75)', textAlign: 'justify', margin: '15px', padding: '20px'}}>{'\t'}The paradisal province of Palawan is a constant feature in many international “Best In The World” lists, thanks to its rich and diverse flora and fauna, and much-preserved natural attractions. Discover why healthy ecotourism is such an essential part in maintaining the natural wonders of this heaven on earth.
 <br/>
 <br/>
 {'\t'}
@@ -69,8 +69,9 @@ To say Palawan is a beach bum's fantasy is an understatement. Sailing the length
 Quite simply, Palawan has the best beaches—not only in the Philippines, but in all of southeast Asia. The best part? Only a fraction of them are known.
 <br/>
 <br/>
-Palawan has always had an environmental streak. It was one of the first provinces to crack down on litter, noise pollution, and single-use plastics. A lot is at stake, as the province's booming tourism industry relies on the successful preservation of its pristine ecology and natural beauty. Against this backdrop, several award­ winning resorts are leading the way toward a more sustainable future, blending native design and low­ carbon elements like solar panels, composting, and edible gardens to create living spaces that will last.</p>
-      {/* <BackgroundSlider/> */}
+Palawan has always had an environmental streak. It was one of the first provinces to crack down on litter, noise pollution, and single-use plastics. A lot is at stake, as the province's booming tourism industry relies on the successful preservation of its pristine ecology and natural beauty. Against this backdrop, several award­ winning resorts are leading the way toward a more sustainable future, blending native design and low­ carbon elements like solar panels, composting, and edible gardens to create living spaces that will last.</p> */}
+
+      {/* <BackgroundSlider  /> */}
 
       {/* <img  src="https://windows10spotlight.com/wp-content/uploads/2020/09/0ef88fa434c849a3472ec0af13970f6f.jpg" /> */}
       <br />
