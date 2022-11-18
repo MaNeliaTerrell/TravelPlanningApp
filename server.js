@@ -6,7 +6,7 @@ require('dotenv').config()
 // Connecting to database
 require ('./config/database')
 const cors = require("cors")
-const axios = require('axios')
+
 
 const app = express()
 const PORT = process.env.PORT || 3001;
