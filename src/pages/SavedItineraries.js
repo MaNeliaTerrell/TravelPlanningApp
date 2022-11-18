@@ -28,25 +28,6 @@ const SavedItineraries = (props) => {
         console.log(expDate);
     }
 
-    // const onSave = async (e) => {
-    //     e.preventDefault()
-    //     // console.log(savedItinerary);
-    //     alert(JSON.stringify(this.state))
-    //     try {
-    //         const {name, img, location, website} = this.state
-    //         const tripData=  {name, img, location, website} 
-
-    //     const travelPlan = await axios.get('/api/plan')
-        
-    //     } catch (error) {
-    //         console.log('Cannot Save');
-    //     }
-    // }
-
-    // const removeElement=()=>{
-    //     {savedItinerary.map(element =>)}
-    // }
-
 
 
     return (
@@ -75,7 +56,7 @@ const SavedItineraries = (props) => {
                                     <a style={{ fontSize: '20px' }} href={item.website} >Website: </a>
                                     <div style={{ justifyContent: 'space-around', alignSelf: 'center' }}>
                                         <Button type='button' style={{ alignContent: 'center' }} >Save</Button>
-                                        <Button style={{ alignContent: 'center' }} onClick={this.props.remove('saved itineraries')}>Delete</Button></div>
+                                        <Button style={{ alignContent: 'center' }} >Delete</Button></div>
                                 </div>
                             </span>
                         ))}

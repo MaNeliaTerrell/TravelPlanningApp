@@ -1,10 +1,10 @@
 .App {
   text-align: center;
   font-family: sans-serif;
-  background-color:rgb(18, 112, 141);
+  background-color:rgb(59, 139, 163);
   background-position-x: center; 
-  background-size: cover ;
-  background-image: url("https://windows10spotlight.com/wp-content/uploads/2020/09/0ef88fa434c849a3472ec0af13970f6f.jpg");
+  /* background-size: cover ; */
+  /* background-image: url("https://windows10spotlight.com/wp-content/uploads/2020/09/0ef88fa434c849a3472ec0af13970f6f.jpg") no-repeat; */
 }
 .main {
 
@@ -52,7 +52,7 @@ input{
   align-content: center;
   
 }
-
+/* 
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
@@ -60,7 +60,7 @@ input{
 }
 
 /* Slideshow */
-
+/*
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
@@ -81,7 +81,7 @@ input{
 }
 
 /* Buttons */
-
+/*
 .slideshowDots {
   text-align: center;
 }
@@ -100,4 +100,4 @@ input{
 
 .slideshowDot.active {
   background-color: #6a0dad;
-}
+} */
