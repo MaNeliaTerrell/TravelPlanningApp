@@ -7,7 +7,7 @@ import NavBar from './components/NavBar'
 import { Routes, Route } from 'react-router-dom'
 import { getUser } from "./utilities/users-service"
 import Weather from './components/Weather';
-import BackgroundSlider from './components/BackgroundSlider';
+
 
 
 
